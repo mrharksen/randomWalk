@@ -95,7 +95,7 @@ def generateRandomWalks(n = 100, p0 = 0.5, alpha = 1.5):
 		CalcSum += np.log(float(lastJump)/n)
 	return CalcSum/n
 
-n = 10000
+n = 1000
 p0 = 0.5
 alpha = 1.5
 randomwalk = RandomWalk(n,p0,alpha)

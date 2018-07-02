@@ -87,14 +87,6 @@ def getStepSize(dist):
 			return dist.index(x)-1
 	return len(dist)-1
 
-def generateRandomWalks(n = 100, p0 = 0.5, alpha = 1.5):
-	CalcSum = 0
-	for i in xrange(10):
-		K = RandomWalk(n, p0, alpha, drawWalk = False)
-		lastJump = K[1]
-		CalcSum += np.log(float(lastJump)/n)
-	return CalcSum/n
-
 n = 10000
 p0 = 0.5
 alpha = 1.5

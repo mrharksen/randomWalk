@@ -134,7 +134,11 @@ def getStepSize(dist):
 	return len(dist)-1
 
 def main():
+<<<<<<< HEAD
 	n = 10000
+=======
+	n = 1000
+>>>>>>> 32ff03e52560af2bf678ffac426358f25c0a87bb
 	p0 = 0.5
 	alpha = 1.5
 	randomwalk = RandomWalk(n,p0,alpha)

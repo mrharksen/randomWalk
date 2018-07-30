@@ -33,12 +33,14 @@ def randomSticks(n = 100, p0 = 0.5, alpha = 1.5, drawWalk = True, drawSticks = T
 			tops, bottoms, xjumps = jumps(randomWalk, n)
 			for i in range(len(xjumps)):
 				x = (xjumps[i]+1, xjumps[i]+1)
-				y = (bottoms[i], tops[i]) 
+				y = (bottoms[i], tops[i])
 				plt.plot(x, y,  'C1')
 			tops, bottoms, xjumps = removeSticks(tops, bottoms, xjumps, n)
+			sticksleft = len(tops)
+			print sticksleft
 			for i in range(len(xjumps)):
 				x = (xjumps[i]+1, xjumps[i]+1)
-				y = (bottoms[i], tops[i]) 
+				y = (bottoms[i], tops[i])
 				plt.plot(x, y,  'C4')
 		plt.show()
 
@@ -194,7 +196,7 @@ def getStepSize(dist):
 	return len(dist)-1
 
 def main():
-	n = 100
+	n = 10000
 	p0 = 0.5
 	alpha = 1.5
 	rnd = randomSticks(n,p0,alpha)
